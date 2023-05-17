@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Table</title>
+  </head>
+  <body>
+    <div id="app" class="relative w-full">
+      <header class="px-8 py-8 bg-white flex justify-between">
+        <div class="flex gap-1">
+          <div class="circle p-4 bg-[#DFD7FF] w-4 h-4 rounded-full"></div>
+          <div class="square p-4 bg-[#DFD7FF] w-20 h-4 rounded-md"></div>
+        </div>
+
+        <div class="flex gap-1">
+          <div class="circle p-4 bg-[#DFD7FF] w-4 h-4 rounded-full"></div>
+          <div class="circle p-4 bg-[#DFD7FF] w-4 h-4 rounded-full"></div>
+          <div class="circle p-4 bg-[#DFD7FF] w-4 h-4 rounded-full"></div>
+        </div>
+      </header>
+      <div class="flex">
+        <div class="side-menu bg-white relative h-screen pl-10 py-16 w-1/6">
+          <div class="relative">
+            <a class="px-5 py-4 w-full flex justify-center items-center bg-[#F6F3FF]" href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="bxs-archive 1">
+                <path id="Vector" d="M18.087 4.40835L15.5895 1.91085C15.5122 1.83332 15.4204 1.77183 15.3193 1.72992C15.2182 1.68802 15.1098 1.66653 15.0003 1.66669H5.00033C4.89087 1.66653 4.78247 1.68802 4.68136 1.72992C4.58024 1.77183 4.48841 1.83332 4.41116 1.91085L1.91366 4.40835C1.8354 4.48554 1.77328 4.57754 1.73093 4.67898C1.68858 4.78041 1.66685 4.88927 1.66699 4.99919V15.8334C1.66699 16.2754 1.84259 16.6993 2.15515 17.0119C2.46771 17.3244 2.89163 17.5 3.33366 17.5H16.667C17.109 17.5 17.5329 17.3244 17.8455 17.0119C18.1581 16.6993 18.3337 16.2754 18.3337 15.8334V4.99919C18.3338 4.88927 18.3121 4.78041 18.2697 4.67898C18.2274 4.57754 18.1653 4.48554 18.087 4.40835ZM5.34533 3.33335H14.6553L15.4887 4.16669H4.51199L5.34533 3.33335ZM14.167 10.8334V11.6667H5.83366V8.33335H7.50033V10H12.5003V8.33335H14.167V10.8334Z" fill="#5345AA"/>
+                </g>
+              </svg>
+              Policies</a>
+          </div>
+        </div>
+  
+        <div class="dashboard-container bg-[#F6F3FF] h-screen w-full px-8 py-4">
+          <div class="dashboard-controls flex justify-between">
+            <div class="flex gap-2">
+              <div class="square p-4 bg-[#DFD7FF] w-24 h-6"></div>
+              <div class="square p-4 bg-[#DFD7FF] w-24 h-6"></div>
+            </div>
+
+            <div class="flex gap-2">
+              <div class="square p-4 bg-[#DFD7FF] w-24 h-6"></div>
+              <a class="p-2 flex justify-center items-center gap-2 bg-[#5345AA] text-white text-xs" href="#">
+                <svg width="15" height="15" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="plus_icon">
+                  <path id="Vector 2" d="M8.5 1V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="Vector 3" d="M1 8.5L16 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                </svg>
+                Add New Policy
+              </a>
+            </div>
+
+          </div>
+
+          <div class="dashboard-table mt-4 text-gray-900 overflow-auto rounded-lg">
+            <table class="w-full shadow-sm p-2 overflow-x-scroll">
+              <thead class="bg-white w-full">
+                <tr>
+                  <th class="p-4">
+                    <input class="bg-orange-500" type="checkbox">
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Type
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Carrier
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Premium
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Billing
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Start
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    End
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    ID
+                  </th>
+                  <th class="p-4 text-sm tracking-wide text-left">
+                    Docs
+                  </th>
+                  <!-- <th class="opacity-0 p-2">
+                    Actions
+                  </th> -->
+                </tr>
+              </thead>
+
+              <tbody class="mt-8 bg-white w-full">
+                <tr class="table-row bg-[#F6F3FF]">
+                  <td class="p-4 flex items-center justify-center whitespace-nowrap">
+                    <input type="checkbox">
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Auto</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>AllState</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>$1,000</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Yearly</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2022</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2023</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>ID.pdf</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Document.pdf</p>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="p-4 flex items-center justify-center whitespace-nowrap">
+                    <input type="checkbox">
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Home</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>AAA</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>$2,500</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Yearly</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2022</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2023</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>ID.pdf</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Document.pdf</p>
+                  </td>
+                </tr>
+
+                <tr class="table-row bg-[#F2EEFF]">
+                  <td class="p-4 flex items-center justify-center whitespace-nowrap">
+                    <input type="checkbox">
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Auto</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>AllState</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>$1,000</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Yearly</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2022</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2023</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>ID.pdf</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Document.pdf</p>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="p-4 flex items-center justify-center whitespace-nowrap">
+                    <input type="checkbox">
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Auto</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>AllState</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>$1,000</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Yearly</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2022</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>10/01/2023</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>ID.pdf</p>
+                  </td>
+                  <td class="p-4 text-sm text-gray-700 whitespace-nowrap">
+                    <p>Document.pdf</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="module" src="/logic/main.js"></script>
+  </body>
+</html>
